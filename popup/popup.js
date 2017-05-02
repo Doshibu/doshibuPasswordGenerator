@@ -10,8 +10,8 @@ $(document).ready(function(){
 	    snap: true
 	});
 
-	var password = GeneratePassword();
-	$('#__password').val(password);
+	setListener();
+	GeneratePassword();
 });
 
 $('#btnCopy').click(function(){
@@ -26,6 +26,15 @@ $('#btnCopy').click(function(){
 $('#btnReset').click(function(){
 	GeneratePassword();
 });
+
+function setListener() {
+	var listComponents = ['#checkLetters', '#checkNumbers', '#checkSymbols', '#__length']
+	listComponents.forEach(function (id) {
+		$(id).change(function() {
+			GeneratePassword();
+		});
+	});
+}
 
 function copyTextToClipboard(text) {
 	$('#__password').select();
@@ -52,13 +61,14 @@ function GeneratePassword() {
 	if($('#checkSymbols').is(':checked')) {
 		possibilities += '!@#$%^&*.,';
 	}
+	possibilities = possibilities.split().sort(function(a, b){return 0.5 - Math.random()}).join('')
 
     for (i=0; i < length; i++) {
         j = getRandomNum(possibilities.length);
         password = password + possibilities.charAt(j);
     }
 
-    return password;
+    $('#__password').val(password);
 }
 
 function getRandomNum(cnt) {
