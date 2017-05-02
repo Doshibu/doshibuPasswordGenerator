@@ -1,0 +1,32 @@
+{
+    "name": "Doshi Password Generator",
+    "version" : "1",
+    "manifest_version": 2,
+    "description": "Password Generator",
+    "icons": {
+        "48": "skin/icon/icon-48.png",
+        "128": "skin/icon/icon-128.png"
+    },
+    "browser_action": {
+        "name": "Doshibu Password Generator",
+        "default_title": "",
+        "default_icon": {
+            "19": "skin/icon/icon-16.png"
+        }
+    },
+    "permissions": [
+        "cookies",
+        "privacy",
+        "tabs",
+        "pageCapture",
+        "http://*/*",
+        "https://*/*",
+        "nativeMessaging",
+        "management",
+        "<all_urls>"
+    ],
+    "web_accessible_resources": [
+        "content/webui/index.html"
+    ],
+    "homepage_url": "https://github.com/Doshibu/doshibuPasswordGenerator"
+}
