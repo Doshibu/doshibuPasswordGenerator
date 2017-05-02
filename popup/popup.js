@@ -1,10 +1,23 @@
-$('#btnCopy').click(function(){
-	var txt = $('#__password').val();
-	if(!txt || txt == ''){
-		return;
-	}
+$(document).ready(function(){
+	$('.single-slider').jRange({
+	    from: 6,
+	    to: 15,
+	    step: 1,
+	    scale: [6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+	    format: '%s',
+	    width: 325,
+	    showLabels: true,
+	    snap: true
+	});
 
-	copyTextToClipboard(txt);
+	$('#btnCopy').click(function(){
+		var txt = $('#__password').val();
+		if(!txt || txt == ''){
+			return;
+		}
+
+		copyTextToClipboard(txt);
+	});
 });
 
 function copyTextToClipboard(text) {
