@@ -1,0 +1,14 @@
+html, body {
+	width: 400px;
+}
+.well {
+	width: 100%;
+	margin: 0;
+}
+.optionBlock, .submitBlock {
+	display: inline-block;
+	margin-left: 35px;
+}
+.submitBlock div {
+	margin: 5px 0;
+}
