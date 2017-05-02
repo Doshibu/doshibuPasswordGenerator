@@ -13,7 +13,7 @@
 	<div class="well">
 		<div class="form-group">
 			<label for="__password">Password :</label>
-			<input type="text" class="form-control" id="__password">
+			<input id="__password" type="text" class="form-control">
 		</div>
 
 		<div class="form-group lengthSlider">
@@ -25,13 +25,13 @@
 
 		<div class="col-md-6 optionBlock">
 			<div class="checkbox">
-				<label><input type="checkbox">Letters</label>
+				<label><input id="checkLetters" type="checkbox" checked="checked">Letters</label>
 			</div>
 			<div class="checkbox">
-				<label><input type="checkbox">Numbers</label>
+				<label><input id="checkNumbers" type="checkbox" checked="checked">Numbers</label>
 			</div>
 			<div class="checkbox">
-				<label><input type="checkbox">Symbols</label>
+				<label><input id="checkSymbols" type="checkbox">Symbols</label>
 			</div>
 		</div>
 
@@ -40,7 +40,7 @@
 				<button id="btnCopy" type="button" class="btn btn-success">Copy it !</button>
 			</div>
 			<div>
-				<button type="button" class="btn btn-warning">Reset</button>
+				<button id="btnReset" type="button" class="btn btn-warning">Reset</button>
 			</div>
 		</div>
 	</div>
