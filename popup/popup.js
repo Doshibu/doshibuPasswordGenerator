@@ -14,25 +14,25 @@ $(document).ready(function(){
 	GeneratePassword();
 });
 
-$('#btnCopy').click(function(){
-	var txt = $('#__password').val();
-	if(!txt || txt == ''){
-		return;
-	}
-
-	copyTextToClipboard(txt);
-});
-
-$('#btnReset').click(function(){
-	GeneratePassword();
-});
-
 function setListener() {
 	var listComponents = ['#checkLetters', '#checkNumbers', '#checkSymbols', '#__length']
 	listComponents.forEach(function (id) {
 		$(id).change(function() {
 			GeneratePassword();
 		});
+	});
+
+	$('#btnCopy').click(function(){
+		var txt = $('#__password').val();
+		if(!txt || txt == ''){
+			return;
+		}
+
+		copyTextToClipboard(txt);
+	});
+
+	$('#btnReset').click(function(){
+		GeneratePassword();
 	});
 }
 
