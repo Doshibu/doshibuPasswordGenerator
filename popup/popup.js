@@ -12,8 +12,8 @@ function copyTextToClipboard(text) {
 	try {
 		var successful = document.execCommand('copy');
 		var msg = successful ? 'successful' : 'unsuccessful';
-		console.log('Copying text command was ' + msg);
+		console.log('Doshibu Password Generator : Copying text command was ' + msg);
 	} catch (err) {
-		console.log('Oops, unable to copy');
+		console.log('Doshibu Password Generator : Oops, unable to copy');
 	}
 }
