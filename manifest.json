@@ -26,8 +26,5 @@
         "management",
         "<all_urls>"
     ],
-    "web_accessible_resources": [
-        "content/webui/index.html"
-    ],
     "homepage_url": "https://github.com/Doshibu/doshibuPasswordGenerator"
 }
