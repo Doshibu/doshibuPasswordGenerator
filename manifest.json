@@ -11,7 +11,7 @@
         "name": "Doshibu Password Generator",
         "default_title": "",
         "default_icon": {
-            "19": "skin/icon/icon-16.png"
+            "19": "skin/icon/icon-19.png"
         },
         "default_popup": "popup/popup.html"
     },
